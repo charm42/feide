@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="-1" />
+<!-- To adjust iPhone visual appearance -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+<title>Skriv inn brukernavn og passord</title>
+
+<!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="https://idp.feide.no/simplesaml/module.php/feide/default_ie.css" />
+<![endif]-->
+
+<!--[if IE 6]>
+	<link rel="stylesheet" type="text/css" href="https://idp.feide.no/simplesaml/module.php/feide/default_ie6.css" />
+<![endif]-->
+
+	<link rel="stylesheet" type="text/css" href="https://idp.feide.no/simplesaml/module.php/feide/default.css" />
+	<link rel="stylesheet" type="text/css" href="https://idp.feide.no/simplesaml/module.php/feide/default-small.css" />
+	<link rel="stylesheet" type="text/css" href="https://idp.feide.no/simplesaml/module.php/feide/handheld_media.css" media="handheld" />
+	<link rel="icon" type="image/png" href="https://idp.feide.no/simplesaml/module.php/feide/favicon.ico" />
+	<script type="text/javascript" src="/simplesaml/resources/jquery-1.8.js"></script>
+    <script type="text/javascript" src="/simplesaml/resources/script.js"></script>
+
+	<meta name="robots" content="noindex, nofollow" />
+
+
+<!-- head -->
+
+<script type="text/javascript" language="JavaScript">
+
+ <!-- Show and hide parts of the page, and turn off autocomplete of password. -->
+
+ $(document).ready(function() {
+   $("input#password").attr("autocomplete", "off");
+
+   $("div#loginhelplink").removeClass();
+   $("div#loginhelplink").addClass("loginhelp");
+
+   $("div#helpframe").hide();
+   $("div#privacyframe").hide();
+   $("div#infoframe").hide();
+   $("div#loginhelpframe").hide();
+
+   $("a[href$=#helpframe]").click(function(){
+     $("div#helpframe").toggle();
+     $("div#privacyframe").hide();
+     $("div#infoframe").hide();
+     $("div#loginhelpframe").hide();
+   });
+   $("a[href$=#privacyframe]").click(function(){
+     $("div#privacyframe").toggle();
+     $("div#helpframe").hide();
+     $("div#infoframe").hide();
+     $("div#loginhelpframe").hide();
+   });
+   $("a[href$=#infoframe]").click(function(){
+     $("div#infoframe").toggle();
+     $("div#helpframe").hide();
+     $("div#privacyframe").hide();
+     $("div#loginhelpframe").hide();
+   });
+   $("a[href$=#loginhelpframe]").click(function(){
+     $("div#loginhelpframe").toggle();
+     $("div#infoframe").hide();
+     $("div#helpframe").hide();
+     $("div#privacyframe").hide();
+   });
+ });
+
+ $(document).ready(function() {
+   $("#input_has_js").val("1");
+   if (window.top !== window.self) {
+     $("#input_iframe").val("1");
+   }
+ });
+
+</script><!-- /head --></head>
+
+<body onload="SimpleSAML_focus('username');">
+
+
+<!-- <div id="borderframe"> -->
+<div class="corner_t">
+<div class="corner_l">
+<div class="corner_r">
+<div class="corner_b">
+		<div class="corner_tl"><div class="corner_tr"> <div class="corner_bl"> <div class="corner_br"> <div class="corner"><div id="logos"><img alt="Service Provider Logo" class="leftlogo" src="https://idp.feide.no/simplesaml/module.php/feide/splogos/14fb3be410edabcc6b1440202586091652efeb05fc675c6df0bc8b48b896a31a.png" />
+	<div class="minheight"></div>
+	<div id="languageframe">
+	<div id="languagebar">
+<a href="https://idp.feide.no/simplesaml/module.php/feide/login.php?asLen=169&amp;AuthState=_78cf06849f87f349ab68cb4728d1f348129653c8ef%3Ahttps%3A%2F%2Fidp.feide.no%2Fsimplesaml%2Fsaml2%2Fidp%2FSSOService.php%3Fspentityid%3Dhttp%253A%252F%252Fsso.efeide.no%252Fsp.xml%26cookieTime%3D1503830259&amp;language=en">English</a> | Bokmål | 
+<a href="https://idp.feide.no/simplesaml/module.php/feide/login.php?asLen=169&amp;AuthState=_78cf06849f87f349ab68cb4728d1f348129653c8ef%3Ahttps%3A%2F%2Fidp.feide.no%2Fsimplesaml%2Fsaml2%2Fidp%2FSSOService.php%3Fspentityid%3Dhttp%253A%252F%252Fsso.efeide.no%252Fsp.xml%26cookieTime%3D1503830259&amp;language=nn">Nynorsk</a> | 
+<a href="https://idp.feide.no/simplesaml/module.php/feide/login.php?asLen=169&amp;AuthState=_78cf06849f87f349ab68cb4728d1f348129653c8ef%3Ahttps%3A%2F%2Fidp.feide.no%2Fsimplesaml%2Fsaml2%2Fidp%2FSSOService.php%3Fspentityid%3Dhttp%253A%252F%252Fsso.efeide.no%252Fsp.xml%26cookieTime%3D1503830259&amp;language=se">Sámegiella</a></div>	<br style="clear: both; height: 0px;" />
+	</div>
+	</div>
+
+
+	<div id="content">
+
+
+<div id="inputframe" class="59a2a0f41277595d">
+	<form action="login.php" method="post" name="f">
+	<fieldset style="height: 216px;">
+		<legend>Pålogging gjennom Feide</legend>
+
+		<p><b>Identum sin enkle skypålogging</b> har bedt om at du logger inn.
+Valgt tilhørighet er <b>Oppdal kommune</b>. <a href="login.php?selectorg=change_org&amp;org=oppdal.kommune.no&amp;asLen=169&amp;AuthState=_78cf06849f87f349ab68cb4728d1f348129653c8ef%3Ahttps%3A%2F%2Fidp.feide.no%2Fsimplesaml%2Fsaml2%2Fidp%2FSSOService.php%3Fspentityid%3Dhttp%253A%252F%252Fsso.efeide.no%252Fsp.xml%26cookieTime%3D1503830259">Endre</a>?</p>
+
+
+
+		<div class="inputfields">
+		<p><label for="username">Brukernavn</label>
+		<input class="inputtext" type="text" id="username" name="feidename"/></p>
+
+		<p><label for="password">Passord</label>
+		<input class="inputtext" type="password" id="password" name="password" /></p>
+		<input type="hidden" name="asLen" value="69" /><input type="hidden" name="AuthState" value="none" />
+		<input type="hidden" name="org" value="oppdal.kommune.no" />
+		<input type="submit" class="submit" value="Logg inn" />
+
+		</div>
+
+		<div id="loginhelplink" style="margin-top: -15px;" class="loginhelp-static"><a href="#loginhelpframe" style="
+    margin-left: 540px; font-weight: lighter; font-size: small;"
+>Glemt brukernavn og passord?</a></div>
+	</fieldset>
+	<input type="hidden" name="has_js" value="0" id="input_has_js" />
+	<input type="hidden" name="inside_iframe" value="0" id="input_iframe" />
+	</form>
+</div>
+
+
+</div></div></div></div></div></div></div></div></div> <!-- box -->
+
+
+<div id="bottomframe">
+<div class="help"><a href="#helpframe">Hjelp</a></div>
+<div class="privacy"><a href="#privacyframe">Personvern og informasjonskapsler</a></div>
+<div class="info"><a href="#infoframe">Mer informasjon</a></div>
+
+
+</div> <!-- bottomframe -->
+
+</div> <!-- content -->
+
+</body>
+</html>
